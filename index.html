@@ -1,0 +1,23 @@
+<html>
+	<header>
+		<title>webapp711</title>
+	</header>
+	<script type="text/javascript" src="bower_components/angularjs/angular.js">
+	</script>
+	<script type="text/javascript" src="app/app.js">
+	</script>
+	<body ng-app="webapp711">
+
+		<div ng-controller="main as c">
+			<h2>{{c.say}}</h2>
+			<ul>
+			<li ng-repeat="coupon in c.coupons">
+				<img ng-src="{{coupon.ImageURL}}" alt="">
+				{{coupon | json}}
+			</li>
+			</ul>
+			<button ng-click="c.load()">load</button>
+		</div>
+		
+	</body>
+</html>
